@@ -13,15 +13,7 @@ import java.util.List;
 @NoArgsConstructor
 @ToString
 @Entity
-/**
- *Esta clase representa la entidad Carrito
- * @version 1.0 10/02/2024
- * @author Alberto Montaner
- */
 public class CarritoEntity {
-    /**
-     * Maneja el flujo de negocio de la entidad Carrito
-     */
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "carrito_id", nullable = false)

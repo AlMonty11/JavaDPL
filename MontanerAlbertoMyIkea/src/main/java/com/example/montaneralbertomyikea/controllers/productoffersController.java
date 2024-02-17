@@ -17,16 +17,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 
-/**
- *Esta clase representa el controlador Productoffer
- * @version 1.0 10/02/2024
- * @author Alberto Montaner
- */
 @Controller
 public class productoffersController {
-    /**
-     * Maneja el flujo de negocio del controlador Productoffer
-     */
+
     @Autowired
     productofferService productofferService;
     @Autowired
@@ -38,21 +31,13 @@ public class productoffersController {
         return "index";
     }
 
-    /**
-     * Muestra la lista de todos los productos.
-     * @return Vista principal de Productoffer
-     */
     @GetMapping("/productoffer")
     public String listarProductos(Model model) {
         List<ProductofferEntity> productoffer = productofferService.listarProductos();
         model.addAttribute("productoffer", productoffer);
         return "productoffer/productoffer";
     }
-    /**
-     * Muestra la vista de los detalles de un producto
-     * @param id ID del producto
-     * @return La vista con los detalles dol producto de correspondiente ID.
-     */
+
     @GetMapping("/detailsProductoffer/{id}")
     public String details(@PathVariable int id, Model model) {
         ProductofferEntity productoffer = productofferService.details(id);

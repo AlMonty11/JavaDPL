@@ -7,14 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-/**
- *Esta clase representa el servicio Productoffer
- * @version 1.0 10/02/2024
- * @author Alberto Montaner
- */
+
 @Service
 public class productofferServiceJPA implements productofferService {
-
     @Autowired
     private productofferRepository por;
 
